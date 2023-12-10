@@ -60,14 +60,15 @@ The following tables lists the configurable parameters of the Unifi chart and th
 | `cloudSql.credentials`                        | Google Cloud SQL credentials secret reference                                                                         | `cloudsql-credentials.json`   |
 | `ingress.enabled`                             | Enables Ingres                                                                                                        | `true`                        |
 | `ingress.sslRedirect`                         | Enables SSL redirect                                                                                                  | `false`                       |
-| `ingress.useHost`                             | Enables host based routing using external `host.external` ( this must be a FQDN)                                           | `false`                            |
-| `ingress.class`                               | Ingress class name                  | `nginx`
-| `ingress.clusterIssuer`                               | Ingress cert manager cluster issuer                  | ``
+| `ingress.useHost`                             | Enables host based routing using external `host.external` ( this must be a FQDN)                                      | `false`                       |
+| `ingress.class`                               | Ingress class name                                                                                                    | `nginx`                       |
+| `ingress.clusterIssuer`                       | Ingress cert manager cluster issuer                                                                                   | ``                            |
+| `ingress.secretName`                          | Name of secret to hold TLS certificate information                                                                    | `flowable-tls`                |
 |<br/>|
-| `rest.enabled`                                | Enables Flowable REST (either enable Flowable UI or Flowable REST)                                                  | `true`                       |
+| `rest.enabled`                                | Enables Flowable REST (either enable Flowable UI or Flowable REST)                                                    | `true`                        |
 | `rest.replicas`                               | Number of replicated pods                                                                                             | `1`                           |
 | `rest.service.name`                           | Kubernetes service name                                                                                               | `flowable-rest`               |
-| `rest.contextPath`                             | Tomcat servlet mapping                                                                                                | `/`                           |
+| `rest.contextPath`                            | Tomcat servlet mapping                                                                                                | `/`                           |
 | `rest.ingressPath`                            | Ingress path mapping                                                                                                  | `flowable-rest`               |
 | `rest.image.repository`                       | Docker image name                                                                                                     | `flowable/flowable-rest`      |
 | `rest.image.tag`                              | Docker tag name                                                                                                       | `latest`                      |
